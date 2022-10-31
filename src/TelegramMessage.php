@@ -46,7 +46,7 @@ class TelegramMessage extends TelegramBase implements TelegramSenderContract
 
     public function line(string $content): self
     {
-        $this->payload['text'] .= $content."\n";
+        $this->payload['text'] .= "\n".$content;
 
         return $this;
     }
